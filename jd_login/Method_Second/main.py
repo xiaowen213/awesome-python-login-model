@@ -180,9 +180,9 @@ def get_try(cid, iApplyNum, maxApplyNum, keys):
     #CSS选择器 找出总页数
     pageitem = doc('.root61 .container .w .p-wrap .p-skip').items()
     #为了应对命名空间而采用的粗暴办法
-    pagestr = list(pageitem)[0].text()
-    pagestr = pagestr[2:]
-    pagestr = pagestr[0:pagestr.find('\n')]
+    pagestr = list(pageitem)[0].text() 
+    pagestr = pagestr[1:]
+    pagestr = pagestr[0:pagestr.find('页)]
     pagenum = int(pagestr)
     print("商品总页数：" + str(pagenum+1) )
 
